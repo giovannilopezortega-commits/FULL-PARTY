@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="a183cfbd-8348-4b08-9d56-fd25b9fa184a.jpg">
+
+
+<title>FULL PARTY</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+.categoria{
+  padding:10px 20px ;
+}
+
+.categoria:first-of-type{
+    margin-top:100px;
+}
+
+@keyframes glow{
+  from{opacity:.7;}
+  to{opacity:1;}
+}
+
+.carousel{
+  overflow:hidden;
+}
+
+.track{
+  display:flex;
+  gap:15px;
+  width:max-content;
+  animation:slide 18s linear infinite;
+}
+
+.track img{
+  width:340px;
+  height:240px;
+  object-fit:cover;
+  border-radius:14px;
+  transition:.4s;
+}
+
+.track img:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+
+@keyframes slide{
+  from{transform:translateX(0);}
+  to{transform:translateX(-40%);}
+}
+
+.logo-fullparty{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-left:20px;
+    box-shadow:0 0 20px rgba(255,0,255,.6);
+    transition:.4s;
+}
+
+.logo-fullparty:hover{
+    transform:scale(1.1) rotate(5deg);
+}
+
+.brand-title{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:2rem;
+    font-weight:900;
+    letter-spacing:4px;
+    color:white;
+    text-transform:uppercase;
+
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #ff00ff,
+      0 0 20px #ff00ff,
+      0 0 40px #ff00ff;
+
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+    }
+
+    to{
+        text-shadow:
+        0 0 10px #fff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 60px #00ffff;
+    }
+}
+
+#navbar{
+    height:125px;
+    position:fixed;
+    top:0;
+    z-index:999;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:linear-gradient(
+        270deg,
+        #ff00ff,
+        #00ffff,
+        #ff0080,
+        #00ff99
+    );
+
+    background-size:800% 800%;
+
+    animation:gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+#videoFondo{
+    position:fixed;
+    top:0;
+    left:0;
+
+    min-width:100%;
+    min-height:100%;
+
+    object-fit:cover;
+
+    z-index:-1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* ===== BARRA DINÁMICA ===== */
+
+.navbar{
+    position:fixed;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:1560px;
+
+    height:120px;
+
+    background:linear-gradient(
+        -45deg,
+        #ff0080,
+        #7928ca,
+        #2afadf,
+        #4facfe
+    );
+
+    background-size:300% 400%;
+
+    animation:gradientMove 10s ease infinite;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 30px;
+
+    border-radius:25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.20);
+
+    transition:.4s ease;
+
+    z-index:1000;
+}
+
+/* Se hace más pequeña al bajar */
+
+.navbar.small{
+    height:65px;
+    border-radius:18px;
+}
+
+/* Animación del degradado */
+
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* ===== LOGO ===== */
+
+.logo img{
+    width:120px !important;
+    height:auto !important;
+    margin: 2px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid rgb(11, 10, 11);
+}
+
+.navbar.small .logo img{
+    width:45px;
+    height:45px;
+}
+
+/* ===== TÍTULO ===== */
+
+.titulo{
+    color:white;
+    font-size:2.9rem;
+    font-weight:900;
+    letter-spacing:4px;
+    text-shadow:2px 2px 10px rgba(0,0,0,.3);
+}
+
+.navbar.small .titulo{
+    font-size:2.9rem;
+}
+
+/* ===== BOTÓN CONTACTO ===== */
+
+.contacto-btn{
+    border:none;
+    padding:18px 35px;
+    border-radius:30px;
+
+    background:white;
+    color:#7928ca;
+
+    font-weight:bold;
+    font-size:25px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.contacto-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 5px 15px rgba(255,255,255,.5);
+}
+
+/* ===== CONTENIDO ===== */
+
+.contenido{
+    margin-top:140px;
+    padding:40px;
+    text-align:center;
+}
+
+.contenido h1{
+    font-size:3rem;
+    color:#333;
+    margin-bottom:20px;
+}
+
+/* ===== MODAL ===== */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:2000;
+}
+
+.modal-content{
+    background:white;
+    width:90%;
+    max-width:500px;
+
+    margin:8% auto;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    position:relative;
+}
+
+.modal-content h2{
+    text-align:center;
+    color:#7928ca;
+    margin-bottom:20px;
+}
+
+.cerrar{
+    position:absolute;
+    right:15px;
+    top:8px;
+    font-size:35px;
+    cursor:pointer;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+.botones{
+    display:flex;
+    gap:10px;
+}
+
+.enviar{
+    flex:1;
+    border:none;
+    background:#4facfe;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.cerrar-btn{
+    flex:1;
+    border:none;
+    background:#ff4b5c;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* ===== CELULAR ===== */
+
+@media(max-width:768px){
+
+    .titulo{
+        font-size:1.5rem;
+    }
+
+    .logo img{
+        width:50px;
+        height:50px;
+    }
+
+    .contacto-btn{
+        padding:10px 15px;
+        font-size:14px;
+    }
+}
+
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      padding-top: 100px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+        /* Ajustes para hacerlo más pequeño */
+  width: auto;          /* Evita que ocupe todo el ancho */
+  padding: 6px 12px;    /* Reduce el espacio interno */
+  font-size: 14px;      /* Texto más pequeño */
+  border-radius: 5px;   /* Mantén esquinas redondeadas */
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+   
+.menu {
+  text-align: center; /* Centra los botones */
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.menu button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007BFF, #00C6FF); /* Color inicial */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  animation: cambioColor 5s infinite alternate; /* Animación automática */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu button:hover {
+  transform: scale(1.1); /* Efecto de agrandar */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra dinámica */
+}
+
+/* Animación de colores */
+@keyframes cambioColor {
+  0%   { background: linear-gradient(135deg, #007BFF, #00C6FF); }
+  25%  { background: linear-gradient(135deg, #FF5733, #FFC300); }
+  50%  { background: linear-gradient(135deg, #28a745, #85e085); }
+  75%  { background: linear-gradient(135deg, #6f42c1, #d63384); }
+  100% { background: linear-gradient(135deg, #20c997, #0dcaf0); }
+}
+
+.musica-control {
+  text-align: center;
+  margin-top: 15px; /* coloca el botón justo debajo de la barra */
+}
+
+img {
+  border: 3px solid rgb(14, 232, 244);   /* Borde dorado */
+  border-radius: 5px;      /* Bordes redondeados (opcional) */
+  padding: 5px;             /* Espacio interno entre la foto y el borde */
+  box-shadow: 0 0 15px rgba(5, 240, 244, 0.6); /* Brillo dorado alrededor */
+}
+
+#contacto {
+  margin-bottom: 8px; /* espacio entre Contacto y Música */
+}
+
+#playPause {
+  margin-top: 15px;
+  padding: 6px 12px;       /* más pequeño */
+  background: linear-gradient(135deg, #b2151a, #d30c8a);
+  color: white;
+  font-size: 14px;         /* texto más chico */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#playPause:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.titulo {
+  text-align: center;   /* centra el texto */
+  font-size: 20px;      /* tamaño opcional */
+  font-weight: bold;    /* lo hace más destacado */
+  margin: 10px 0;       /* espacio arriba y abajo */
+  width: 100%;          /* ocupa todo el ancho para que se centre */
+}
+
+
+    /* Tarjetas principales */
+    .tarjetas-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px auto;
+    }
+
+    .tarjeta {
+      background: #d5eebd;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      overflow: hidden;
+      width: 500px;
+      height: 400px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .tarjeta button {
+      background: #80d31b;
+      color: #fffdfd;
+      border: none;
+      padding: 18px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .tarjeta button:hover {
+      background: #0d47a1;
+    }
+
+.contenedor {
+  width: 90%;   /* ocupa el 90% del ancho disponible */
+  max-width: 1200px; /* pero nunca más grande que 1200px */
+  margin: auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 300px; /* mínimo 300px, pero se adapta */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* menú vertical en pantallas pequeñas */
+  }
+
+  .card {
+    width: 100%; /* tarjetas ocupan todo el ancho en móvil */
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+  <video autoplay muted loop id="videoFondo">
+    <source src="53 Bridal Makeup Looks for Moms - Pin-800726008780943850.mp4" type="video/mp4">
+</video>
+
+<!-- Audio -->
+<audio id="musica" loop>
+  <source src="Gabito Ballesteros - CLEOPATRA (Versión Karaoke).mp3" type="audio/mpeg">
+</audio>
+
+  <!-- Tarjetas entre barra y banquetes -->
+  <div class="tarjetas-info">
+    <!-- Tarjeta Quiénes Somos -->
+    <div class="tarjeta">
+      <img src="cr p1nk1sland on instagram.jpeg" alt="Quiénes Somos">
+      <a href="quienes somos.html">
+        <button>Quiénes Somos</button>
+      </a>
+    </div>
+
+    <!-- Tarjeta Lo Que Ofrecemos -->
+    <div class="tarjeta">
+      <img src="descarga (1).jpeg" alt="Lo Que Ofrecemos">
+      <a href="ofrecemos.html">
+        <button>Lo Que Ofrecemos</button>
+      </a>
+    </div>
+  </div>
+
+
+<section class="categoria">
+
+<div class="menu" id="inicio">
+  <button onclick="location.href='banquetes.html'">🍽️ BANQUETES</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="245d590c-1d43-4b54-b145-0f3ce7c4200a.jpg">
+      <img src="31e21afa-49d6-4c55-a59c-cf62530dd692.jpg">
+      <img src="FB_IMG_1668559499483.jpg">
+      <img src="FB_IMG_1668559491240.jpg">
+      <img src="FB_IMG_1668559493792.jpg">
+      <img src="FB_IMG_1668559278203.jpg">
+      <img src="FB_IMG_1668378444743.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="categoria">
+<div class="menu" id="inicio">
+  <button onclick="location.href='barra de bebidas.html'">🍹 BARRA DE BEBIDAS</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="FB_IMG_1664895233891.jpg">
+      <img src="FB_IMG_1657884948780.jpg">
+      <img src="FB_IMG_1657884939696.jpg">
+      <img src="c70f3751-6deb-4e86-bd03-eaa65e3ef3d2.jpg">
+      <img src="c00f0e99-1751-4b97-b00f-20e07bee84d5.jpg">
+      <img src="20220827_210125.jpg">
+      <img src="20220827_210119.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="categoria">
+<div class="menu" id="inicio">
+  <button onclick="location.href='trompo al pastor.html'">🌮 TROMPO AL PASTOR</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="FB_IMG_1652574505277.jpg">
+      <img src="FB_IMG_1649211928718.jpg">
+      <img src="FB_IMG_1646627502865.jpg">
+      <img src="FB_IMG_1649211960683.jpg">
+      <img src="20221210_171344.jpg">
+      <img src="FB_IMG_1649211968855.jpg">
+      <img src="FB_IMG_1649211949241.jpg">
+
+    </div>
+  </div>
+</section>
+
+<section class="categoria">
+<div class="menu" id="inicio">
+  <button onclick="location.href='parrilladas.html'">🥩 PARRILLADAS</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="FB_IMG_1652966137423.jpg">
+      <img src="231865330_2976983602548643_3123181463570808411_n.jpg">
+      <img src="20230423_135255.jpg">
+      <img src="20230527_161336-01.jpeg">
+      <img src="232207721_2976983642548639_8920728985748636932_n (1).jpg">
+      <img src="20230423_135311.jpg">
+      <img src="IMG_2806.PNG">
+    </div>
+  </div>
+</section>
+
+<section class="categoria">
+<div class="menu" id="inicio">
+  <button onclick="location.href='dj.html'">🎧 DJ</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="3f432a38-a36c-42be-9c25-f36a61873614.jpg">
+      <img src="FB_IMG_1724787214918.jpg">
+      <img src="FB_IMG_1647797781281.jpg">
+      <img src="FB_IMG_1724787210288.jpg">
+      <img src="FB_IMG_1724787255893.jpg">
+      <img src="FB_IMG_1718724550296.jpg">
+      <img src="FB_IMG_1647903082308.jpg">
+    </div>
+  </div>
+<section class="categoria">
+<div class="menu" id="inicio">
+  <button onclick="location.href='barra de snacks.html'">🍬 BARRA DE SNACKS</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="IMG_1157.JPG">
+      <img src="IMG_1155.jpg">
+      <img src="IMG_1158.jpg">
+      <img src="4d9b40f1-1bc3-42e7-ad9d-546793205a82.jpg">
+      <img src="20221002_153244.jpg">
+      <img src="Screenshot_20220116-095110_Facebook.jpg">
+      <img src="Screenshot_20220306-221813_Facebook.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="categoria">
+<div class="menu" id="inicio">
+  <button onclick="location.href='mobiliario.html'">🪑 MOBILIARIO</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="FB_IMG_1724789006876.jpg">
+      <img src="20221228_144333.jpg">
+      <img src="c6bbe55e-d256-4737-8fac-a0d77ee5cad5.jpg">
+      <img src="59a6c49a-9641-436b-9a44-e3aa8ca15d4f.jpg">
+      <img src="FB_IMG_1724789006876.jpg">
+      <img src="IMG-20220926-WA0001.jpg">
+      <img src="FB_IMG_1662321173117.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="categoria">
+<div class="menu" id="inicio">
+  <button onclick="location.href='bUffet de guisados.html'">🍲 BUFFET DE GUISADOS</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="239297192_933569587374650_5954561120325446143_n.jpg">
+      <img src="20220910_152201.jpg">
+      <img src="239933859_933569500707992_4267336061416431191_n.jpg">
+      <img src="259823750_4267440230046026_688394483275460338_n.jpg">
+      <img src="FB_IMG_1643504172827.jpg">
+      <img src="239734888_933569307374678_3522369040541434401_n.jpg">
+      <img src="239647178_933569200708022_1411509509848271233_n.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="categoria">
+<div class="menu" id="inicio">
+  <button onclick="location.href='decoraciones.html'">🎈 DECORACIONES</button>
+</div>
+
+  <div class="carousel">
+    <div class="track">
+      <img src="3a1579c3-d281-4d84-9f2a-35305b476432 - copia.jpg">
+      <img src="FB_IMG_1660099608391.jpg">
+      <img src="FB_IMG_1660312773558.jpg">
+      <img src="FB_IMG_1660099683786.jpg">
+      <img src="92c786bc-dfd6-4222-bcf4-384a515fef33.jpg">
+      <img src="FB_IMG_1652102053337.jpg">
+      <img src="FB_IMG_1664240347757.jpg">
+    </div>
+  </div>
+</section>
+
+<header class="navbar" id="navbar">
+
+    <div class="logo">
+        <img src="a183cfbd-8348-4b08-9d56-fd25b9fa184a.jpg" width="50" height="50" alt="Logo">
+    </div>
+
+    <div class="titulo">
+       🎉 TODO PARA TUS FIESTAS Y EVENTOS 🎉
+    </div>
+
+    <button class="contacto-btn" id="abrirModal">
+        Contacto
+    </button>
+
+ <!-- Botón de música debajo de Contacto -->
+  <button id="playPause">🎵 Música</button>
+</div>
+
+</header>
+
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <span class="cerrar" id="cerrarX">&times;</span>
+
+        <h2>CONTÁCTANOS</h2>
+
+<form action="https://formsubmit.co/8402ced3ac9c59a0f3468b8cd8da6ad3" method="POST">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <input type="tel" name="telefono" placeholder="Tu número de teléfono"
+            pattern="[0-9]{10}" title="Ingresa un número de 10 dígitos" required>
+
+        <!-- Redirección a la página de agradecimiento -->
+        <input type="hidden" name="_next" value="http://localhost:5500/gracias.html">
+
+        <!-- Opcional: evitar captcha de FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Opcional: asunto del correo -->
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu sitio web">
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+// Barra dinámica
+window.addEventListener("scroll", () => {
+
+    const navbar =
+        document.getElementById("navbar");
+
+    if(window.scrollY > 50){
+        navbar.classList.add("small");
+    }else{
+        navbar.classList.remove("small");
+    }
+});
+
+// Modal
+const modal =
+document.getElementById("modal");
+
+document
+.getElementById("abrirModal")
+.onclick = () => {
+    modal.style.display = "block";
+};
+
+document
+.getElementById("cerrarX")
+.onclick = () => {
+    modal.style.display = "none";
+};
+
+window.onclick = (e) => {
+    if(e.target === modal){
+        modal.style.display = "none";
+    }
+};
+
+</script>
+
+<script>
+document.getElementById("playMusic").addEventListener("click", function() {
+    document.getElementById("musica").play();
+});
+</script>
+
+<script>
+  const boton = document.getElementById("playPause");
+  const musica = document.getElementById("musica");
+  let reproduciendo = false;
+
+  boton.addEventListener("click", () => {
+    if (reproduciendo) {
+      musica.pause();
+      boton.textContent = "🎵 Reproducir Música";
+      reproduciendo = false;
+    } else {
+      musica.play();
+      boton.textContent = "⏸ Pausar Música";
+      reproduciendo = true;
+    }
+  });
+</script>
+
+
+</body>
+</html>

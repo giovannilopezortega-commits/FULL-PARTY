@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Gracias!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #2ca5da, #81c784);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .contenedor {
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      animation: aparecer 1s ease-out;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ffeb3b;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #ff5722;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background 0.3s ease;
+    }
+
+    a:hover {
+      background: #e64a19;
+    }
+
+    @keyframes aparecer {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🎉 ¡Gracias por tu mensaje! 🎉</h1>
+    <p>Tu formulario ha sido enviado correctamente.<br>Nos pondremos en contacto contigo muy pronto.</p>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>

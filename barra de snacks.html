@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio de Barra de Snacks</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #ff9800, #ffc107);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .contenido {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgb(236, 196, 158);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+    }
+    h2 {
+      color: #ff9800;
+      margin-bottom: 20px;
+    }
+    ul {
+      text-align: left;
+      margin: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #ff9800, #ffc107);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .back-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #e65100, #ffb300);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>🍬 Servicio de Barra de Snacks</header>
+  <div class="contenido">
+    <h2>Variedad de snacks a elegir:</h2>
+    <ul>
+      <li>Papas</li>
+      <li>Palomitas</li>
+      <li>Fuente de chocolate</li>
+      <li>Gomitas</li>
+      <li>Fruta picada</li>
+    </ul>
+
+    <h2>El servicio incluye:</h2>
+    <ul>
+      <li>Montaje: decoración temática de la barra acorde al estilo del evento</li>
+      <li>Consumibles: desechables, bolsas o empaques individuales, aderezos, chamoy, chile en polvo y salsas</li>
+      <li>Personal: atención, porcionado y mantenimiento de la barra</li>
+    </ul>
+
+    <h2>Duración del servicio:</h2>
+    <p>La barra permanece disponible hasta agotar existencias o por un tiempo estimado de <strong>[X] horas</strong>.</p>
+
+    <a href="index.html" class="back-btn">⬅ Regresar</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio de Decoraciones</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #ff4081, #e91e63);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .contenido {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgb(242, 166, 199);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+    }
+    h2 {
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+    ul {
+      text-align: left;
+      margin: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #ff4081, #e91e63);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .back-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #c2185b, #ad1457);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>🎈 Servicio de Decoraciones</header>
+  <div class="contenido">
+    <h2>Conceptos disponibles:</h2>
+    <ul>
+      <li>Decoración con globos: arcos, orgánicos, mamparas</li>
+      <li>Centros de mesa y arreglos florales</li>
+      <li>Backdrops / fondos fotográficos temáticos</li>
+    </ul>
+
+    <h2>El servicio incluye:</h2>
+    <ul>
+      <li>Diseño: asesoría personalizada para definir la paleta de colores y la temática del evento</li>
+      <li>Logística: montaje previo al evento y retiro de estructuras al finalizar</li>
+    </ul>
+
+    <a href="index.html" class="back-btn">⬅ Regresar</a>
+  </div>
+</body>
+</html>
