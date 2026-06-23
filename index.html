@@ -183,7 +183,7 @@ img {
 }
 
 .social-btn.instagram {
-    background: linear-gradient(45deg, #e0230a 0%, #1624e5 25%, #dc8527 50%, #0890e5 75%, #d92708 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     grid-column: span 2; 
 }
 
@@ -429,14 +429,17 @@ img {
 </head>
 <body>
 
+<!-- Video de Fondo -->
 <video autoplay muted loop id="videoFondo">
     <source src="53 Bridal Makeup Looks for Moms - Pin-800726008780943850.mp4" type="video/mp4">
 </video>
 
+<!-- Elemento de Audio -->
 <audio id="musica" loop>
     <source src="Gabito Ballesteros - CLEOPATRA (Versión Karaoke).mp3" type="audio/mpeg">
 </audio>
 
+<!-- Encabezado / Navbar -->
 <header class="navbar" id="navbar">
     <div class="logo">
         <img src="a183cfbd-8348-4b08-9d56-fd25b9fa184a.jpg" alt="Logo FULL PARTY">
@@ -447,16 +450,20 @@ img {
     </div>
 
     <div class="acciones">
+        <!-- Fila 1: Contacto al lado de Música -->
         <button class="contacto-btn" id="abrirModal">Contacto</button>
         <button id="playPause">🎵 Música</button>
         
+        <!-- Fila 2: Facebook al lado de Tik Tok -->
         <a href="https://www.facebook.com/share/1BHW9nwuaG/" target="_blank" class="social-btn facebook">👥 Facebook</a>
         <a href="https://www.tiktok.com/@full_partyy?_r=1&_t=ZS-97Js60m7ofM" target="_blank" class="social-btn tiktok">🎵 Tik Tok</a>
         
-        <a href="https://www.instagram.com/reel/DYtk4HKOb7p/?igsh=YnQxODRvM2lqcDhs" target="_blank" class="social-btn instagram">📸 Instagram</a>
+        <!-- Fila 3: Instagram centrado (ENLACE ACTUALIZADO) -->
+        <a href="https://www.instagram.com/fullparty.gl?igsh=aXdxdTFjZDduaWZ1" target="_blank" class="social-btn instagram">📸 Instagram</a>
     </div>
 </header>
 
+<!-- Tarjetas de Presentación -->
 <div class="tarjetas-info">
     <div class="tarjeta">
         <img src="cr p1nk1sland on instagram.jpeg" alt="Quiénes Somos">
@@ -468,6 +475,7 @@ img {
     </div>
 </div>
 
+<!-- Categorías de Servicios -->
 <section class="categoria">
     <div class="menu">
         <button onclick="location.href='banquetes.html'">🍽️ BANQUETES</button>
@@ -648,6 +656,7 @@ img {
     </div>
 </section>
 
+<!-- Ventana Emergente (Modal) -->
 <div class="modal" id="modal">
     <div class="modal-content">
         <span class="cerrar" id="cerrarX">&times;</span>
@@ -666,6 +675,7 @@ img {
     </div>
 </div>
 
+<!-- ===== SCRIPTS JAVASCRIPT ===== -->
 <script>
 // Manejo del scroll para la barra superior
 window.addEventListener("scroll", () => {
